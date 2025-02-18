@@ -36,7 +36,13 @@ SECRET_KEY = 'django-insecure-1*dr3z#1%x96nj3i6+xlh9*t_51yx070o@e4#0j41=h7(sv(t5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*",".vercel.app"]
+ALLOWED_HOSTS = ["*",".vercel.app","https://teal-crumble-6486f8.netlify.app"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://www.thunderclient.com",
+    "http://127.0.0.1:8000",
+    "http://localhost:3000",
+    "https://teal-crumble-6486f8.netlify.app"
+]
 
 
 # Application definition
