@@ -11,7 +11,5 @@ urlpatterns = [
      
     path('',views.CustomPromptView.as_view() ),
     path("login/", views.login_view, name="login"),   
-re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
-    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+
 ]
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
