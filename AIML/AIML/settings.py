@@ -34,7 +34,7 @@ CONFIG = {
 SECRET_KEY = 'django-insecure-1*dr3z#1%x96nj3i6+xlh9*t_51yx070o@e4#0j41=h7(sv(t5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*",".vercel.app","https://teal-crumble-6486f8.netlify.app"]
 CSRF_TRUSTED_ORIGINS = [
@@ -48,7 +48,6 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,7 +70,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -168,7 +166,7 @@ USE_TZ = True
 
 STATIC_URL = '/staticfiles/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, "promptApp/static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "promptApp/static")]
 
 
 # Default primary key field type
