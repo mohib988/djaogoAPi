@@ -10,4 +10,4 @@ urlpatterns = [
     path('',views.CustomPromptView.as_view() ),
     path("login/", views.login_view, name="login"),   
 ]
-urlpatterns += static(settings.STATIC_URL+settings.STATIC_ROOT, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
